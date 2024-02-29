@@ -5,11 +5,15 @@ def perfect(n):
     for number in range(1,n):
         if n%number==0:
             total=total+number
-    print(total==n)
+    if total==n:
+        return True
 
 
 def is_it_perfect():
     n=int(input("Give me a number."))
-    perfect(n)
+    for numbers in range(1, n):
+        if perfect(numbers) == True:
+            print(numbers)
 
 is_it_perfect()
+
